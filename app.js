@@ -107,6 +107,9 @@ function removeTaskFromLocalStorage(taskItem) {
   tasks.forEach(function (task, index) {
     if (taskItem.textContent === task) {
       tasks.splice(index, 1); //i dont know what this is
+      //index is basically the position we want to add or delete
+      // and the next argument tells us how many numbers we want to delete
+      // if the argument is zero it means we want to ADD
     }
   });
   localStorage.setItem("tasks", JSON.stringify(tasks));
